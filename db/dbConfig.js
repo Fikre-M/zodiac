@@ -3,7 +3,8 @@
 require("dotenv").config(); // Loads .env variables
 const mongoose = require("mongoose");
 
-const MONGO_URI = process.env.MONGODB_URI || "mongodb://localhost:27017/xyz";
+const MONGO_URI =
+  process.env.MONGODB_URI || "mongodb://localhost:27017/KokebiQuizApp";
 
 // Optional: Connection options
 const options = {
