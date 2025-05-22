@@ -1,0 +1,171 @@
+/* Main container styles */
+.headerSection {
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.headerContent {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navigation container */
+.navContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+/* Logo container */
+.logoContainer {
+    display: flex;
+    align-items: center;
+}
+
+.logoContainer a {
+    text-decoration: none;
+}
+
+.logo {
+    height: 40px;
+    width: auto;
+}
+
+/* Navigation links */
+.navLinks {
+    display: flex;
+    gap: 30px;
+}
+
+.navLinks a {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 5px 0;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.navLinks a:hover {
+  color: #d4af37; 
+}
+
+/* Underline effect on hover */
+.navLinks a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #d4af37;
+    transition: width 0.3s ease;
+}
+
+.navLinks a:hover::after {
+    width: 100%;
+}
+
+/* Mobile view - for responsive design */
+@media (max-width: 768px) {
+    .navContainer {
+    flex-direction: column;
+    gap: 15px;
+    }
+    
+    .navLinks {
+        width: 100%;
+        justify-content: space-around;
+        gap: 10px;
+    }
+    
+    .navLinks a {
+        font-size: 14px;
+    }
+}
+
+/* Dark mode option */
+.darkMode {
+    background-color: #2c3e50;
+}
+
+.darkMode .navLinks a {
+    color: #fff;
+}
+
+.darkMode .navLinks a:hover {
+    color: #d4af37;
+}
+
+
+
+
+
+/* logo */
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: clamp(1.5rem, 5vw, 2.5rem); /* Responsive font size */
+    font-family: Boldonse, sans-serif;
+    gap: 0.2em;
+    background-color: black;
+    color: aliceblue;
+    width: clamp(110px, 15vw, 320px); /* Responsive width */
+    padding: 5px 12px;
+    border-radius: 0.5em;
+    transition: box-shadow 0.3s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    cursor: pointer;
+}
+
+
+
+.sixPointedStar {
+    --star-color: gold;
+    --size: 1em;
+    --sqrt-3: 1.73205080757;
+    width: 0;
+    height: 0;
+    border-left: calc(var(--size) / 2) solid transparent;
+    border-right: calc(var(--size) / 2) solid transparent;
+    border-bottom: calc(var(--size) * var(--sqrt-3) / 2) solid var(--star-color);
+    position: relative;
+    display: inline-block;
+    margin: 0 0.05em;
+    bottom: 0.14em;
+    transition: border-bottom-color 0.7s;
+}
+
+.sixPointedStar::after {
+    content: "";
+    position: absolute;
+    left: calc(-1 * var(--size) / 2);
+    top: calc(var(--size) * var(--sqrt-3) / 6);
+    width: 0;
+    height: 0;
+    border-left: calc(var(--size) / 2) solid transparent;
+    border-right: calc(var(--size) / 2) solid transparent;
+    border-top: calc(var(--size) * var(--sqrt-3) / 2) solid var(--star-color);
+    transition: border-top-color 0.7s;
+}
+
+/* Animation keyframes for color cycling */
+@keyframes starColorCycle {
+    0% { --star-color: white; }
+    40% { --star-color: #e63946; } 
+    80% { --star-color: rgb(91, 127, 244); }
+    100% { --star-color: gold; }
+}
+
+/* Trigger animation on hover of the logo */
+.logo:hover .sixPointedStar {
+    animation: starColorCycle 1.2s forwards;
+}
+.logo:hover .sixPointedStar::after {
+    animation: starColorCycle 1.2s forwards;
+}
+
