@@ -1,4 +1,29 @@
 {
+<<<<<<< HEAD
+  "name": "server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fikre-M/zodiac-quizApp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Fikre-M/zodiac-quizApp/issues"
+  },
+  "homepage": "https://github.com/Fikre-M/zodiac-quizApp#readme",
+  "description": "",
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "express": "^5.1.0",
+    "mongoose": "^8.14.1"
+=======
   "name": "zodiac-quiz",
   "private": true,
   "version": "0.0.0",
@@ -25,5 +50,6 @@
     "eslint-plugin-react-refresh": "^0.4.19",
     "globals": "^16.0.0",
     "vite": "^6.3.0"
+>>>>>>> 4757c3797a50eee2b9849d914ad2d2f1cb663722
   }
 }
